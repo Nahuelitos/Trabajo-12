@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GsEOykbyBdB6LnLQyfYwpEd6jl/hY9JTBYwFTDLQLKd+tcypyK4Z6YbD/OwVsIOLWH1qrKVlaeqid4y9Cw7GFg==",
+  "dgSpecHash": "CvylMmCo9/m2qXIG7h0OwXhdGhlsu96LE/T0/ahtyYyR2M97qKeSOLnmlEzyg/RuyNZBwprvWcl6QShpMXr0Kg==",
   "success": true,
-  "projectFilePath": "/home/et12alumno/Descargas/TP-12/Api/Api.csproj",
+  "projectFilePath": "/mnt/Datos/Repos/Trabajo-12/Api/Api.csproj",
   "expectedPackageFiles": [
     "/home/et12alumno/.nuget/packages/microsoft.aspnetcore.openapi/8.0.8/microsoft.aspnetcore.openapi.8.0.8.nupkg.sha512",
     "/home/et12alumno/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

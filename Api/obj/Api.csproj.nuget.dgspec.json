@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/et12alumno/Descargas/TP-12/Api/Api.csproj": {}
+    "/mnt/Datos/Repos/Trabajo-12/Api/Api.csproj": {}
   },
   "projects": {
-    "/home/et12alumno/Descargas/TP-12/Api/Api.csproj": {
+    "/mnt/Datos/Repos/Trabajo-12/Api/Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/et12alumno/Descargas/TP-12/Api/Api.csproj",
+        "projectUniqueName": "/mnt/Datos/Repos/Trabajo-12/Api/Api.csproj",
         "projectName": "Api",
-        "projectPath": "/home/et12alumno/Descargas/TP-12/Api/Api.csproj",
+        "projectPath": "/mnt/Datos/Repos/Trabajo-12/Api/Api.csproj",
         "packagesPath": "/home/et12alumno/.nuget/packages/",
-        "outputPath": "/home/et12alumno/Descargas/TP-12/Api/obj/",
+        "outputPath": "/mnt/Datos/Repos/Trabajo-12/Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/et12alumno/.nuget/NuGet/NuGet.Config"
