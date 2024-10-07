@@ -97,8 +97,8 @@ app.UseHttpsRedirection();
 // Lista de roles inicial
 List<Rol> roles = new List<Rol>
 {
-    new Rol { Id = 1, Nombre = "Admin", Habilitado = true, FechaCreacion = DateTime.Now },
-    new Rol { Id = 2, Nombre = "User", Habilitado = true, FechaCreacion = DateTime.Now }
+    new Rol { IdRol = 1, Nombre = "Admin", Habilitado = true, FechaCreacion = DateTime.Now },
+    new Rol { IdRol = 2, Nombre = "User", Habilitado = true, FechaCreacion = DateTime.Now }
 };
 
 // POST: /rol - Crear nuevo rol
@@ -109,11 +109,11 @@ app.MapPost("/rol", ([FromBody] Rol rol) =>
         return Results.BadRequest("El nombre del rol no puede estar vacío o null.");
     }
 
-    rol.Id = roles.Count > 0 ? roles.Max(r => r.Id) + 1 : 1;
+    rol.IdRol = roles.Count > 0 ? roles.Max(r => r.IdRol) + 1 : 1;
     rol.FechaCreacion = DateTime.Now;
     roles.Add(rol);
 
-    return Results.Created($"/rol/{rol.Id}", rol);
+    return Results.Created($"/rol/{rol.IdRol}", rol);
 }).WithTags("Rol");
 
 // GET: /roles - Ver todos los roles
@@ -125,14 +125,14 @@ app.MapGet("/roles", () =>
 // GET: /rol/{id} - Ver detalle de un rol por id
 app.MapGet("/rol/{id}", (int id) =>
 {
-    var rol = roles.FirstOrDefault(r => r.Id == id);
+    var rol = roles.FirstOrDefault(r => r.IdRol == id);
     return rol != null ? Results.Ok(rol) : Results.NotFound();
 }).WithTags("Rol");
 
 // PUT: /rol/{id} - Modificar contenido de un rol (excepto nombre)
 app.MapPut("/rol/{id}", (int id, [FromBody] Rol rol) =>
 {
-    var rolAActualizar = roles.FirstOrDefault(r => r.Id == id);
+    var rolAActualizar = roles.FirstOrDefault(r => r.IdRol == id);
     if (rolAActualizar == null)
     {
         return Results.NotFound();
@@ -153,7 +153,7 @@ app.MapPut("/rol/{id}", (int id, [FromBody] Rol rol) =>
 // DELETE: /rol/{id} - Borrar un rol por id
 app.MapDelete("/rol/{id}", (int id) =>
 {
-    var rolAEliminar = roles.FirstOrDefault(r => r.Id == id);
+    var rolAEliminar = roles.FirstOrDefault(r => r.IdRol == id);
     if (rolAEliminar != null)
     {
         roles.Remove(rolAEliminar);
@@ -163,5 +163,8 @@ app.MapDelete("/rol/{id}", (int id) =>
     return Results.NotFound();
 }).WithTags("Rol");
 
+/*app.MapGroup("/api")
+    .MapUsuarioEndpoints()
+    .WithTags("Usuario");*/
 
 app.Run();
