@@ -1,4 +1,5 @@
 using Api;
+using Api.Endpoints;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -163,8 +164,12 @@ app.MapDelete("/rol/{id}", (int id) =>
     return Results.NotFound();
 }).WithTags("Rol");
 
-/*app.MapGroup("/api")
+    app.MapGroup("/api")
     .MapUsuarioEndpoints()
-    .WithTags("Usuario");*/
+    .WithTags("Usuario");
+
+    app.MapGroup("/api")
+    .MapRolEndpoints()
+    .WithTags("Rol");
 
 app.Run();
